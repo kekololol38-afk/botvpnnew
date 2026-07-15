@@ -1,6 +1,6 @@
 import os
 import threading
-
+import asyncio
 from flask import Flask
 
 from telegram import (
@@ -858,6 +858,10 @@ async def buttons(
 
 
 def main():
+
+    asyncio.set_event_loop(
+        asyncio.new_event_loop()
+    )
 
 
 
